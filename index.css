@@ -124,35 +124,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.team .card {
-  text-align: center;
-  overflow: hidden;
-}
-
-.team .card-img-top {
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.team .card:hover .card-img-top {
-  transform: scale(1.1);
-}
-
-.team .card-body {
-  background-color: var(--accent-color);
-}
-
-.team .card-title {
-  color: var(--primary-color);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.team .card-text {
-  color: var(--secondary-color);
-}
-
 .events .card {
   height: 100%;
   display: flex;
@@ -179,6 +150,7 @@ h2 {
   align-self: flex-start;
   margin-top: auto;
 }
+
 /* Styles */
 section.gallery .gallery-title h3 {
   font-size: 2.5rem;
