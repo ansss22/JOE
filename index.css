@@ -351,16 +351,63 @@ section.gallery .gallery-overlay .overlay-text a.close:hover {
   margin-bottom: 1.5rem;
 }
 
-.contact-form .form-control {
-  background-color: var(--accent-color);
-  border: 2px solid var(--secondary-color);
-  color: var(--text-color);
+/* Floating Label Container */
+.form-div {
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
-.contact-form .btn-primary {
-  width: auto;
-  padding: 0.75rem 2rem;
+/* Input & Textarea Styling */
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  outline: none;
+  background: none;
+  position: relative;
+  z-index: 1;
 }
+
+/* Label Styling */
+/* Ensure label stays above the input field */
+.form-label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  padding: 0 0.3rem;
+  transition: 0.3s ease-in-out;
+  z-index: 10; /* Ensure label is above input */
+}
+
+/* Move Label Up When Input is Focused */
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  background-color: white; /* Ensures label has background */
+  z-index: 10; /* Keep it on top */
+  padding: 0 5px;
+}
+
+
+/* Ensure Input Has No Placeholder */
+.form-input::placeholder {
+  opacity: 0;
+}
+
+
+
+.contact-form .btn-primary:hover {
+  box-shadow: 0 10px 36px rgba(235, 64, 12, 0.5);
+  
+}
+
 
 .footer {
   background-color: var(--primary-color);
