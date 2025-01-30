@@ -44,6 +44,25 @@ body {
 
 /* navbar styles ends */
 
+.hero {
+  background: linear-gradient(rgba(89, 8, 8, 0.8), rgba(145, 61, 52, 0.8)),
+    no-repeat center center;
+  background-size: cover;
+  height: 30vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  padding: 2rem 1rem;
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Improve text readability */
+}
 /* team styles */
 .team .card {
   text-align: center;
