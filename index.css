@@ -78,9 +78,7 @@ body {
   border-color: var(--primary-color);
 }
 
-section {
-  padding: 5rem 0;
-}
+
 
 h2 {
   color: var(--primary-color);
@@ -107,6 +105,62 @@ h2 {
   font-weight: 600;
 }
 
+
+.departements {
+  background-color: #f8f9fa;
+}
+
+.dept-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dept-card:hover {
+  transform: translateY(-5px);
+}
+
+.dept-card i {
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Utilisez votre couleur principale */
+  margin-bottom: 1rem;
+}
+
+.dept-card h3 {
+  color: var(--secondary-color); /* Utilisez votre couleur secondaire */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dept-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.animate__animated {
+  animation-duration: 0.8s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
 .services .card {
   text-align: center;
   padding: 2rem;
@@ -124,31 +178,204 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.events .card {
+.evenements {
+  background-color: #fff;
+}
+
+.event-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-image {
+  height: 200px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(89, 8, 8, 0.9), rgba(145, 61, 52, 0.9));
+}
+
+.gradient-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
+  text-align: center;
 }
 
-.events .card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+.gradient-overlay h3 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.events .card-title {
+.event-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.event-card.online {
+  border-left-color: #4CAF50;
+}
+
+.event-card.online .event-badge {
+  background: #4CAF50;
+}
+
+.event-content {
+  padding: 1.5rem;
+}
+
+.trainer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.trainer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--primary-color);
+  flex-shrink: 0;
+}
+
+.trainer-details h4 {
+  color: var(--secondary-color);
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.position {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.event-meta {
+  display: grid;
+  gap: 0.8rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #555;
+}
+
+.meta-item i {
+  width: 25px;
+  text-align: center;
   color: var(--primary-color);
-  font-weight: 600;
-  margin-bottom: 1rem;
 }
 
-.events .card-text {
-  flex-grow: 1;
+@media (max-width: 768px) {
+  .event-image {
+    height: 150px;
+  }
+  
+  .gradient-overlay h3 {
+    font-size: 1.5rem;
+  }
+  
+  .trainer-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .trainer-photo {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.events .btn-primary {
-  align-self: flex-start;
-  margin-top: auto;
+@media (min-width: 992px) {
+  .gradient-overlay h3 {
+    font-size: 2.2rem;
+  }
+}
+.trainer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.trainer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--primary-color);
+}
+
+.trainer-details h4 {
+  color: var(--secondary-color);
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.position {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.event-meta {
+  display: grid;
+  gap: 0.8rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #555;
+}
+
+.meta-item i {
+  width: 25px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .event-image {
+    height: 200px;
+  }
+  
+  .trainer-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .trainer-photo {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* Styles */
@@ -309,7 +536,7 @@ section.gallery .gallery-overlay .overlay-text a.close:hover {
 .statistics .count {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .statistics .counter {
