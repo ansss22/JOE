@@ -351,6 +351,20 @@ section.gallery .gallery-overlay .overlay-text a.close:hover {
   margin-bottom: 1.5rem;
 }
 
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-unstyled li {
+  margin-bottom: 1rem;
+}
+
+.list-unstyled i {
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
+}
+
 /* Floating Label Container */
 .form-div {
   position: relative;
@@ -395,19 +409,14 @@ section.gallery .gallery-overlay .overlay-text a.close:hover {
   padding: 0 5px;
 }
 
-
 /* Ensure Input Has No Placeholder */
 .form-input::placeholder {
   opacity: 0;
 }
 
-
-
 .contact-form .btn-primary:hover {
   box-shadow: 0 10px 36px rgba(235, 64, 12, 0.5);
-  
 }
-
 
 .footer {
   background-color: var(--primary-color);
