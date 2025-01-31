@@ -12,6 +12,9 @@
   --input-padding: 1rem;
   --transition-speed: 0.3s;
   --button-hover: #ff4500;
+  --first-color: orangered;
+  --normal-font-size: 1rem;
+  --small-font-size: .75rem;
 }
 
 *,
