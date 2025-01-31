@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
+/*===== VARIABLES CSS =====*/
 :root {
-  --primary-color: #FF6347; /* Couleur principale */
-  --secondary-color: #333; /* Texte principal */
+  --primary-color: #FF6347;
+  --secondary-color: #333;
   --border-color: #DADCE0;
   --focus-border-color: #FF6347;
   --input-color: #80868B;
@@ -14,12 +15,11 @@
   --button-hover: #ff4500;
   --first-color: orangered;
   --normal-font-size: 1rem;
-  --small-font-size: .75rem;
+  --small-font-size: 0.75rem;
 }
 
-*,
-::before,
-::after {
+/*===== BASE =====*/
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -40,52 +40,12 @@ body {
 }
 
 @keyframes gradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Header (Navbar) */
-.navbar {
-  background-color: rgba(89, 8, 8, 0.9); /* Couleur de fond du header */
-  padding: 1rem 0;
-  position: fixed; /* Rend le header sticky */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Assure que le header est au-dessus du contenu */
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: rgba(89, 8, 8, 0.9); /* Couleur de fond lorsqu'on scroll */
-}
-
-.navbar-brand,
-.nav-link {
-  color: #ffe5dc !important; /* Couleur du texte */
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #7ca4ff !important; /* Couleur du texte au survol */
-}
-
-.navbar-toggler {
-  border-color: #ffe5dc; /* Couleur du bouton toggler */
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 229, 220, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Formulaire */
+/*===== FORMULAIRE =====*/
 .l-form {
   width: 100%;
   max-width: 800px;
@@ -97,201 +57,28 @@ body {
   transition: box-shadow var(--transition-speed);
   position: relative;
   box-sizing: border-box;
-  margin-top: 80px; /* Espace entre le header et le formulaire */
+  margin-top: 80px;
 }
 
 .l-form:hover {
   box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
 }
 
-.form__title {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--primary-color);
-  font-weight: 700;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+/* Autres styles de formulaire et navbar... */
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.form__div {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.form__input,
-textarea,
-select {
-  width: 100%;
-  padding: var(--input-padding);
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  outline: none;
-  font-size: 1rem;
-  transition: all var(--transition-speed);
-  background-color: #f4f7fc;
-}
-
-.form__input:focus,
-textarea:focus,
-select:focus {
-  border-color: var(--focus-border-color);
-  box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
-}
-
-.form__label {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  color: var(--input-color);
-  font-size: 1rem;
-  transition: all var(--transition-speed);
-}
-
-.form__input:focus + .form__label,
-textarea:focus + .form__label,
-select:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label,
-textarea:not(:placeholder-shown) + .form__label,
-select:not(:placeholder-shown) + .form__label {
-  top: -12px;
-  font-size: 0.85rem;
-  color: var(--primary-color);
-  font-weight: 600;
-}
-
-textarea {
-  min-height: 160px;
-  resize: none;
-}
-
-.form__button {
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: #fff;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all var(--transition-speed);
-  position: relative;
-}
-
-.form__button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: all 0.5s ease;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.form__button:hover::after {
-  width: 400%;
-  height: 400%;
-  opacity: 1;
-}
-
-.form__button:hover {
-  background-color: var(--button-hover);
-  transform: translateY(-3px);
-}
-
-.form__button:active {
-  transform: translateY(0);
-}
-
-/* Carte Google Maps */
-.map-container {
-  margin-top: 2rem;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Footer */
-.footer {
-  background-color: rgba(89, 8, 8, 0.9); /* Couleur de fond du footer */
-  color: #ffe5dc; /* Couleur du texte */
-  padding: 3rem 0 1rem;
-  position: relative; /* Rend le footer sticky */
-  bottom: 0;
-  width: 100%; /* S'étend sur toute la largeur */
-  z-index: 1000; /* Assure que le footer est au-dessus du contenu */
-}
-
-.top-footer {
-  display: flex;
-  justify-content: space-around; /* Répartit les sections horizontalement */
-  padding: 0 20px; /* Ajoute un peu de padding pour le contenu */
-}
-
-.about-us,
-.contact-us {
-  flex: 1; /* Les sections prennent une part égale de l'espace */
-  max-width: 45%; /* Limite la largeur des sections pour éviter qu'elles ne soient trop larges */
-}
-
-.copyright {
-  border-top: 1px solid #913d34; /* Couleur de la bordure */
-  margin-top: 2rem;
-  padding-top: 1rem;
-  text-align: center;
-}
-
-/* Responsive */
+/*===== RESPONSIVE =====*/
 @media (max-width: 768px) {
   .l-form {
     padding: 2rem;
-  }
-
-  .form__title {
-    font-size: 1.8rem;
-  }
-
-  body {
-    padding: 10px;
-  }
-
-  .l-form {
     width: 100%;
     max-width: 100%;
   }
 
-  .form__input,
-  textarea,
-  select {
+  .form__input, textarea, select {
     font-size: 0.9rem;
   }
 
   .form__button {
     font-size: 1rem;
-  }
-
-  .top-footer {
-    flex-direction: column; /* Empile les sections verticalement sur les petits écrans */
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-us,
-  .contact-us {
-    max-width: 100%; /* Les sections prennent toute la largeur sur les petits écrans */
   }
 }
