@@ -1,3 +1,9 @@
+
+/* Import des styles de base depuis index.css */
+@import url("index.css");
+
+/* Styles spécifiques à la page Contact */
+
 :root {
   --primary-color: #590808;
   --secondary-color: #913d34;
@@ -15,32 +21,32 @@ body {
 
 /* Header (Navbar) */
 .navbar {
-  background-color: rgba(89, 8, 8, 0.9); /* Couleur de fond du header */
+  background-color: rgba(89, 8, 8, 0.9);
   padding: 1rem 0;
-  position: fixed; /* Rend le header sticky */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Assure que le header est au-dessus du contenu */
+  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background-color: rgba(89, 8, 8, 0.9); /* Couleur de fond lorsqu'on scroll */
+  background-color: rgba(89, 8, 8, 0.9);
 }
 
 .navbar-brand,
 .nav-link {
-  color: #ffe5dc !important; /* Couleur du texte */
+  color: #ffe5dc !important;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #7ca4ff !important; /* Couleur du texte au survol */
+  color: #7ca4ff !important;
 }
 
 .navbar-toggler {
-  border-color: #ffe5dc; /* Couleur du bouton toggler */
+  border-color: #ffe5dc;
 }
 
 .navbar-toggler-icon {
@@ -67,7 +73,6 @@ body {
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-
 
 
 .contacts .map iframe {
@@ -115,7 +120,9 @@ body {
 }
 
 /* Label Styling */
+
 /* Ensure label stays above the input field */
+
 .form-label {
   position: absolute;
   left: 1rem;
@@ -124,7 +131,11 @@ body {
   color: var(--text-color);
   padding: 0 0.3rem;
   transition: 0.3s ease-in-out;
+
+  z-index: 10;
+
   z-index: 10; /* Ensure label is above input */
+
 }
 
 /* Move Label Up When Input is Focused */
@@ -134,8 +145,13 @@ body {
   left: 0.8rem;
   font-size: 0.8rem;
   color: var(--secondary-color);
+
+  background-color: white;
+  z-index: 10;
+
   background-color: white; /* Ensures label has background */
   z-index: 10; /* Keep it on top */
+
   padding: 0 5px;
 }
 
@@ -235,9 +251,17 @@ body {
     max-width: 100%;
   }
 }
+
+
 main {
   padding-top: 70px;
 }
+
+
+main {
+  padding-top: 70px;
+}
+
 /* Formulaire */
 /* 
 .l-form {
@@ -251,7 +275,11 @@ main {
   transition: box-shadow var(--transition-speed);
   position: relative;
   box-sizing: border-box;
+
+  margin: 80px auto; /* Centrer le formulaire */
+
   margin-top: 80px; 
+
 }
 
 .l-form:hover {
@@ -368,6 +396,8 @@ textarea {
 }
 
 
+
+
 .map-container {
   margin-top: 2rem;
   border-radius: 10px;
@@ -375,8 +405,115 @@ textarea {
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 800px;
+
+  margin: 2rem auto; /* Centrer la carte */
+}
+
+/* Footer structuré comme dans l'index */
+.footer .top-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.footer .about-us,
+.footer .contact-us {
+  flex: 1;
+  max-width: 45%;
+}
+
+.footer .about-us h5,
+.footer .contact-us h5 {
+  color: var(--highlight-color);
+  margin-bottom: 1.5rem;
+}
+
+.footer .about-us p {
+  margin-bottom: 1.5rem;
+}
+
+.footer .list-inline {
+  padding: 0;
+  list-style: none;
+}
+
+.footer .list-inline-item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footer .list-inline-item a {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer .list-inline-item a:hover {
+  color: var(--highlight-color);
+}
+
+.footer .contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .contact-list li {
+  margin-bottom: 1rem;
+}
+
+.footer .contact-list i {
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
+}
+
+.copyright {
+  border-top: 1px solid var(--secondary-color);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .l-form {
+    padding: 2rem;
+  }
+
+  .form__title {
+    font-size: 1.8rem;
+  }
+
+  .l-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form__input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+  }
+
+  .form__button {
+    font-size: 1rem;
+  }
+
+  .footer .top-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .about-us,
+  .footer .contact-us {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
   margin-left: auto;
   margin-right: auto;
 } 
 
 */
+
