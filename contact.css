@@ -1,15 +1,21 @@
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root {
-  /*===== Colores =====*/
-  --first-color: orangered;
-  --input-color: #80868B;
+  --primary-color: #FF6347;
+  --secondary-color: #333;
   --border-color: #DADCE0;
-  /*===== Fuente y tipografia =====*/
-  --body-font: "Roboto", sans-serif;
+  --focus-border-color: #FF6347;
+  --input-color: #80868B;
+  --gradient-start: #FF6347;
+  --gradient-end: #FFB6C1;
+  --font-family: "Roboto", sans-serif;
+  --input-padding: 1rem;
+  --transition-speed: 0.3s;
+  --button-hover: #ff4500;
+  --first-color: orangered;
   --normal-font-size: 1rem;
-  --small-font-size: .75rem;
+  --small-font-size: 0.75rem;
 }
 
 /*===== BASE =====*/
@@ -19,99 +25,60 @@
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
-
-h1 {
-  margin: 0;
-}
-
-/*===== FORM =====*/
-.l-form {
+  font-family: var(--font-family);
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: auto;
+  background-size: 400% 400%;
+  animation: gradientBackground 8s ease infinite;
+  padding: 0 10px;
 }
 
-.form {
-  width: 360px;
-  padding: 3rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-.form__title {
-  font-weight: 500;
-  margin-bottom: 2.5rem;
-}
-.form__div {
-  position: relative;
-  height: 52px;
-  margin-bottom: 1.5rem;
-}
-.form__input {
-  position: absolute;
-  top: 0;
-  left: 0;
+
+/*===== FORMULAIRE =====*/
+.l-form {
   width: 100%;
-  height: 100%;
-  font-size: var(--normal-font-size);
-  border: 2px solid var(--border-color);
-  border-radius: 0.5rem;
-  outline: none;
-  padding: 1rem;
-  background: none;
-  z-index: 1;
-}
-.form__label {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  padding: 0 0.25rem;
+  max-width: 800px;
+  padding: 3rem;
   background-color: #fff;
-  color: var(--input-color);
-  font-size: var(--normal-font-size);
-  transition: 0.3s;
-}
-.form__button {
-  display: block;
-  margin-left: auto;
-  padding: 0.75rem 2rem;
-  outline: none;
-  border: none;
-  background-color: var(--first-color);
-  color: #fff;
-  font-size: var(--normal-font-size);
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.form__button:hover {
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: box-shadow var(--transition-speed);
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 80px;
 }
 
-/*Input focus move up label*/
-.form__input:focus + .form__label {
-  top: -0.5rem;
-  left: 0.8rem;
-  color: var(--first-color);
-  font-size: var(--small-font-size);
-  font-weight: 500;
-  z-index: 10;
+.l-form:hover {
+  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
 }
 
-/*Input focus sticky top label*/
-.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
-  top: -0.5rem;
-  left: 0.8rem;
-  z-index: 10;
-  font-size: var(--small-font-size);
-  font-weight: 500;
-}
+/* Autres styles de formulaire et navbar... */
 
-/*Input focus*/
-.form__input:focus {
-  border: 2px solid var(--first-color);
+/*===== RESPONSIVE =====*/
+@media (max-width: 768px) {
+  .l-form {
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form__input, textarea, select {
+    font-size: 0.9rem;
+  }
+
+  .form__button {
+    font-size: 1rem;
+  }
 }
