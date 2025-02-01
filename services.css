@@ -102,70 +102,78 @@ main {
 /* Services Section Styles */
 #services {
   background-color: var(--background-color);
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 #services .card {
-  background-color: var(--accent-color);
-  border-radius: 10px;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 #services .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 #services .icon {
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #services .card:hover .icon {
   color: var(--secondary-color);
+  transform: scale(1.1);
 }
 
 #services .card-body {
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 #services h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #services p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
 }
 
 /* Pricing Section Styles */
 #pricing {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 #pricing .card {
   background-color: var(--background-color);
-  border-radius: 10px;
+  border: none;
+  border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 #pricing .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 #pricing .card-body {
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 #pricing h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #pricing p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-color);
 }
-
 /* footer styles */
 .footer {
   background-color: var(--primary-color);
