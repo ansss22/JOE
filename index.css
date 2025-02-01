@@ -178,72 +178,6 @@ h2 {
   margin-bottom: 1rem;
 } 
 
-/* Services Section Styles */
-#services {
-  background-color: var(--background-color);
-  padding: 4rem 0;
-}
-
-#services .card {
-  background-color: var(--accent-color);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#services .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-#services .icon {
-  transition: color 0.3s ease;
-}
-
-#services .card:hover .icon {
-  color: var(--secondary-color);
-}
-
-#services .card-body {
-  padding: 2rem;
-}
-
-#services h3 {
-  margin-bottom: 1rem;
-}
-
-#services p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* Pricing Section Styles */
-#pricing {
-  padding: 4rem 0;
-}
-
-#pricing .card {
-  background-color: var(--background-color);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#pricing .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-#pricing .card-body {
-  padding: 2rem;
-}
-
-#pricing h3 {
-  margin-bottom: 1rem;
-}
-
-#pricing p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
 
 .evenements {
   background-color: #fff;
@@ -594,21 +528,7 @@ section.gallery .gallery-overlay .overlay-text a.close:hover {
     font-size: 1rem;
   }
 }
-.statistics {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
-  padding: 4rem 0;
-}
 
-.statistics .count {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.statistics .counter {
-  font-size: 1.25rem;
-}
 
 /* footer styles */
 .footer {
