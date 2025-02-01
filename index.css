@@ -44,11 +44,9 @@ body {
 
 /* navbar styles ends */
 
-
 .hero {
   background: linear-gradient(rgba(89, 8, 8, 0.4), rgba(145, 61, 52, 0.8)),
-    url(images/background.jpg) no-repeat center
-      center;
+    url(images/background.jpg) no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -78,8 +76,6 @@ body {
   border-color: var(--primary-color);
 }
 
-
-
 h2 {
   color: var(--primary-color);
   font-weight: 700;
@@ -104,7 +100,6 @@ h2 {
   color: var(--secondary-color);
   font-weight: 600;
 }
-
 
 .departements {
   background-color: #f8f9fa;
@@ -176,8 +171,7 @@ h2 {
 .services .card i {
   color: var(--primary-color);
   margin-bottom: 1rem;
-} 
-
+}
 
 .evenements {
   background-color: #fff;
@@ -199,7 +193,11 @@ h2 {
 .event-image {
   height: 200px;
   position: relative;
-  background: linear-gradient(135deg, rgba(89, 8, 8, 0.9), rgba(145, 61, 52, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(89, 8, 8, 0.9),
+    rgba(145, 61, 52, 0.9)
+  );
 }
 
 .gradient-overlay {
@@ -230,11 +228,11 @@ h2 {
 }
 
 .event-card.online {
-  border-left-color: #4CAF50;
+  border-left-color: #4caf50;
 }
 
 .event-card.online .event-badge {
-  background: #4CAF50;
+  background: #4caf50;
 }
 
 .event-content {
@@ -294,16 +292,16 @@ h2 {
   .event-image {
     height: 150px;
   }
-  
+
   .gradient-overlay h3 {
     font-size: 1.5rem;
   }
-  
+
   .trainer-info {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .trainer-photo {
     width: 100px;
     height: 100px;
@@ -367,12 +365,12 @@ h2 {
   .event-image {
     height: 200px;
   }
-  
+
   .trainer-info {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .trainer-photo {
     width: 100px;
     height: 100px;
@@ -527,54 +525,6 @@ section.gallery .gallery-overlay .overlay-text a.close:hover {
   section.gallery .gallery-overlay .overlay-text p {
     font-size: 1rem;
   }
-}
-
-
-/* footer styles */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
-  padding: 3rem 0 1rem;
-}
-
-.footer h5 {
-  color: var(--highlight-color);
-  margin-bottom: 1.5rem;
-}
-
-.footer .about-us p {
-  margin-bottom: 1.5rem;
-}
-
-.footer .list-inline-item a {
-  color: var(--accent-color);
-  font-size: 1.25rem;
-  transition: color 0.3s ease;
-}
-
-.footer .list-inline-item a:hover {
-  color: var(--highlight-color);
-}
-
-.footer .contact-list {
-  list-style: none;
-  padding: 0;
-}
-
-.footer .contact-list li {
-  margin-bottom: 1rem;
-}
-
-.footer .contact-list i {
-  margin-right: 0.5rem;
-  color: var(--highlight-color);
-}
-
-.copyright {
-  border-top: 1px solid var(--secondary-color);
-  margin-top: 2rem;
-  padding-top: 1rem;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
