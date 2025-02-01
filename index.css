@@ -173,6 +173,77 @@ h2 {
   margin-bottom: 1rem;
 }
 
+
+
+.project-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.project-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--secondary-color);
+}
+
+.project-card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title i {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.project-theme {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.card-text strong {
+  color: var(--primary-color);
+  min-width: 120px;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.project-card {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.4s; }
 .evenements {
   background-color: #fff;
 }
