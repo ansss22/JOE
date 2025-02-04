@@ -11,6 +11,11 @@
   --highlight-color: #7ca4ff;
   --text-color: #333;
   --background-color: #fff;
+  --border-color: #DADCE0;
+  --focus-border-color: #FF6347;
+  --input-color: #80868B;
+  --input-padding: 1rem;
+  --transition-speed: 0.3s;
 }
 
 body {
@@ -18,6 +23,10 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
+
+
+/* Formulaire */
+.l-form {
 
 /* Header (Navbar) */
 .navbar {
@@ -108,22 +117,28 @@ body {
 
 /* Input & Textarea Styling */
 .form-input {
+
   width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--secondary-color);
-  border-radius: 5px;
-  outline: none;
-  background: none;
+  max-width: 800px;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: none !important; /* Désactive l'ombre */
+  backdrop-filter: blur(10px);
+  transition: none;
   position: relative;
-  z-index: 1;
+  box-sizing: border-box;
+  margin: 80px auto; /* Centrer le formulaire */
 }
+
+.form__label {
+
 
 /* Label Styling */
 
 /* Ensure label stays above the input field */
 
-.form-label {
+
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -139,8 +154,8 @@ body {
 }
 
 /* Move Label Up When Input is Focused */
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
   top: -0.6rem;
   left: 0.8rem;
   font-size: 0.8rem;
@@ -156,9 +171,20 @@ body {
 }
 
 /* Ensure Input Has No Placeholder */
-.form-input::placeholder {
+.form__input::placeholder {
   opacity: 0;
 }
+
+.l-form:hover,
+.l-form:focus-within {
+  box-shadow: none !important; /* Empêche l'ombre au survol ou focus */
+}
+
+.form__div {
+  position: relative;
+  margin-bottom: 2rem;
+  box-shadow: none !important; /* Désactive les ombres */
+=======
 
 .contact-form .btn-primary:hover {
   box-shadow: 0 10px 36px rgba(235, 64, 12, 0.5);
@@ -280,11 +306,9 @@ main {
 
   margin-top: 80px; 
 
+
 }
 
-.l-form:hover {
-  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
-}
 
 .form__title {
   font-size: 2rem;
@@ -302,10 +326,7 @@ main {
   gap: 2rem;
 }
 
-.form__div {
-  position: relative;
-  margin-bottom: 2rem;
-}
+
 
 .form__input,
 textarea,
@@ -324,29 +345,36 @@ select {
 textarea:focus,
 select:focus {
   border-color: var(--focus-border-color);
-  box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
+  /* Supprimer l'effet d'ombre au focus */
+  box-shadow: none;
 }
 
-.form__label {
+/* Label Styling */
+.form-label {
   position: absolute;
+  left: 1rem;
   top: 50%;
-  left: 15px;
   transform: translateY(-50%);
-  color: var(--input-color);
-  font-size: 1rem;
-  transition: all var(--transition-speed);
+  color: var(--text-color);
+  padding: 0 0.3rem;
+  transition: 0.3s ease-in-out;
+  z-index: 10; /* Ensure label is above input */
 }
 
-.form_input:focus + .form_label,
-textarea:focus + .form__label,
-select:focus + .form__label,
-.form_input:not(:placeholder-shown) + .form_label,
-textarea:not(:placeholder-shown) + .form__label,
-select:not(:placeholder-shown) + .form__label {
+/* Move Label Up When Input is Focused */
+.form__input:focus + .form-label,
+textarea:focus + .form-label,
+select:focus + .form-label,
+.form__input:not(:placeholder-shown) + .form-label,
+textarea:not(:placeholder-shown) + .form-label,
+select:not(:placeholder-shown) + .form-label {
   top: -12px;
-  font-size: 0.85rem;
-  color: var(--primary-color);
-  font-weight: 600;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  background-color: white; /* Ensures label has background */
+  z-index: 10; /* Keep it on top */
+  padding: 0 5px;
 }
 
 textarea {
@@ -366,26 +394,6 @@ textarea {
   position: relative;
 }
 
-.form__button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: all 0.5s ease;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.form__button:hover::after {
-  width: 400%;
-  height: 400%;
-  opacity: 1;
-}
-
 .form__button:hover {
   background-color: var(--button-hover);
   transform: translateY(-3px);
@@ -396,6 +404,8 @@ textarea {
 }
 
 
+/* Carte Google Maps */
+=======
 
 
 .map-container {
