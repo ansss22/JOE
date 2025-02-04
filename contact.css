@@ -38,7 +38,8 @@ body {
 }
 
 .l-form:hover {
-  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
+  /* Supprimer l'effet d'ombre au survol */
+  box-shadow: none;
 }
 
 .form__title {
@@ -79,7 +80,8 @@ select {
 textarea:focus,
 select:focus {
   border-color: var(--focus-border-color);
-  box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
+  /* Supprimer l'effet d'ombre au focus */
+  box-shadow: none;
 }
 
 /* Label Styling */
@@ -245,6 +247,6 @@ textarea {
   .footer .about-us,
   .footer .contact-us {
     max-width: 100%;
-    margin-bottom:2rem;
-}
+    margin-bottom: 2rem;
+  }
 }
