@@ -29,18 +29,25 @@ body {
   padding: 3rem;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: none !important; /* Désactive l'ombre */
   backdrop-filter: blur(10px);
-  transition: box-shadow var(--transition-speed);
+  transition: none;
   position: relative;
   box-sizing: border-box;
   margin: 80px auto; /* Centrer le formulaire */
 }
 
-.l-form:hover {
-  /* Supprimer l'effet d'ombre au survol */
-  box-shadow: none;
+.l-form:hover,
+.l-form:focus-within {
+  box-shadow: none !important; /* Empêche l'ombre au survol ou focus */
 }
+
+.form__div {
+  position: relative;
+  margin-bottom: 2rem;
+  box-shadow: none !important; /* Désactive les ombres */
+}
+
 
 .form__title {
   font-size: 2rem;
@@ -58,11 +65,7 @@ body {
   gap: 2rem;
 }
 
-.form__div {
-  position: relative;
-  margin-bottom: 2rem;
-  box-shadow: none; /* Supprimer les ombres */
-}
+
 
 .form__input,
 textarea,
