@@ -36,7 +36,42 @@ body {
   box-sizing: border-box;
   margin: 80px auto; /* Centrer le formulaire */
 }
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  padding: 0 0.3rem;
+  transition: 0.3s ease-in-out;
 
+  z-index: 10;
+
+  z-index: 10; /* Ensure label is above input */
+
+}
+
+/* Move Label Up When Input is Focused */
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  top: -0.6rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+
+  background-color: white;
+  z-index: 10;
+
+  background-color: white; /* Ensures label has background */
+  z-index: 10; /* Keep it on top */
+
+  padding: 0 5px;
+}
+
+/* Ensure Input Has No Placeholder */
+.form__input::placeholder {
+  opacity: 0;
+}
 .l-form:hover,
 .l-form:focus-within {
   box-shadow: none !important; /* Empêche l'ombre au survol ou focus */
