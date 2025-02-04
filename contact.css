@@ -9,236 +9,17 @@
   --highlight-color: #7ca4ff;
   --text-color: #333;
   --background-color: #fff;
+  --border-color: #DADCE0;
+  --focus-border-color: #FF6347;
+  --input-color: #80868B;
+  --input-padding: 1rem;
+  --transition-speed: 0.3s;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
-}
-
-/* Header (Navbar) */
-.navbar {
-  background-color: rgba(89, 8, 8, 0.9);
-  padding: 1rem 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: rgba(89, 8, 8, 0.9);
-}
-
-.navbar-brand,
-.nav-link {
-  color: #ffe5dc !important;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #7ca4ff !important;
-}
-
-.navbar-toggler {
-  border-color: #ffe5dc;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 229, 220, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* hero styles */
-.hero {
-  background: linear-gradient(rgba(89, 8, 8, 0.8), rgba(145, 61, 52, 0.8)),
-    no-repeat center center;
-  background-size: cover;
-  height: 30vh;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-color);
-  padding: 2rem 1rem;
-}
-
-.hero h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.contacts .map iframe {
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
-}
-
-.contact-addresses h4 {
-  color: var(--secondary-color);
-  margin-bottom: 1.5rem;
-}
-
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-unstyled li {
-  margin-bottom: 1rem;
-}
-
-.list-unstyled i {
-  margin-right: 0.5rem;
-  color: var(--highlight-color);
-}
-
-/* Floating Label Container */
-.form-div {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-/* Input & Textarea Styling */
-.form-input {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--secondary-color);
-  border-radius: 5px;
-  outline: none;
-  background: none;
-  position: relative;
-  z-index: 1;
-}
-
-/* Label Styling */
-.form-label {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  font-size: 1rem;
-  color: var(--text-color);
-  padding: 0 0.3rem;
-  transition: 0.3s ease-in-out;
-  z-index: 10;
-}
-
-/* Move Label Up When Input is Focused */
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  top: -0.6rem;
-  left: 0.8rem;
-  font-size: 0.8rem;
-  color: var(--secondary-color);
-  background-color: white;
-  z-index: 10;
-  padding: 0 5px;
-}
-
-/* Ensure Input Has No Placeholder */
-.form-input::placeholder {
-  opacity: 0;
-}
-
-.contact-form .btn-primary:hover {
-  box-shadow: 0 10px 36px rgba(235, 64, 12, 0.5);
-}
-
-/* footer styles */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
-  padding: 3rem 0 1rem;
-}
-
-.footer h5 {
-  color: var(--highlight-color);
-  margin-bottom: 1.5rem;
-}
-
-.footer .about-us p {
-  margin-bottom: 1.5rem;
-}
-
-.footer .list-inline-item a {
-  color: var(--accent-color);
-  font-size: 1.25rem;
-  transition: color 0.3s ease;
-}
-
-.footer .list-inline-item a:hover {
-  color: var(--highlight-color);
-}
-
-.footer .contact-list {
-  list-style: none;
-  padding: 0;
-}
-
-.footer .contact-list li {
-  margin-bottom: 1rem;
-}
-
-.footer .contact-list i {
-  margin-right: 0.5rem;
-  color: var(--highlight-color);
-}
-
-.copyright {
-  border-top: 1px solid var(--secondary-color);
-  margin-top: 2rem;
-  padding-top: 1rem;
-  text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .l-form {
-    padding: 2rem;
-  }
-
-  .form__title {
-    font-size: 1.8rem;
-  }
-
-  body {
-    padding: 10px;
-  }
-
-  .l-form {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .form__input,
-  textarea,
-  select {
-    font-size: 0.9rem;
-  }
-
-  .form__button {
-    font-size: 1rem;
-  }
-
-  .top-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-us,
-  .contact-us {
-    max-width: 100%;
-  }
-}
-
-main {
-  padding-top: 70px;
 }
 
 /* Formulaire */
@@ -301,26 +82,32 @@ select:focus {
   box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
 }
 
-.form__label {
+/* Label Styling */
+.form-label {
   position: absolute;
+  left: 1rem;
   top: 50%;
-  left: 15px;
   transform: translateY(-50%);
-  color: var(--input-color);
-  font-size: 1rem;
-  transition: all var(--transition-speed);
+  color: var(--text-color);
+  padding: 0 0.3rem;
+  transition: 0.3s ease-in-out;
+  z-index: 10; /* Ensure label is above input */
 }
 
-.form_input:focus + .form_label,
-textarea:focus + .form__label,
-select:focus + .form__label,
-.form_input:not(:placeholder-shown) + .form_label,
-textarea:not(:placeholder-shown) + .form__label,
-select:not(:placeholder-shown) + .form__label {
+/* Move Label Up When Input is Focused */
+.form__input:focus + .form-label,
+textarea:focus + .form-label,
+select:focus + .form-label,
+.form__input:not(:placeholder-shown) + .form-label,
+textarea:not(:placeholder-shown) + .form-label,
+select:not(:placeholder-shown) + .form-label {
   top: -12px;
-  font-size: 0.85rem;
-  color: var(--primary-color);
-  font-weight: 600;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  background-color: white; /* Ensures label has background */
+  z-index: 10; /* Keep it on top */
+  padding: 0 5px;
 }
 
 textarea {
@@ -340,26 +127,6 @@ textarea {
   position: relative;
 }
 
-.form__button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: all 0.5s ease;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.form__button:hover::after {
-  width: 400%;
-  height: 400%;
-  opacity: 1;
-}
-
 .form__button:hover {
   background-color: var(--button-hover);
   transform: translateY(-3px);
@@ -369,6 +136,7 @@ textarea {
   transform: translateY(0);
 }
 
+/* Carte Google Maps */
 .map-container {
   margin-top: 2rem;
   border-radius: 10px;
