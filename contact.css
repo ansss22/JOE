@@ -61,6 +61,7 @@ body {
 .form__div {
   position: relative;
   margin-bottom: 2rem;
+  box-shadow: none; /* Supprimer les ombres */
 }
 
 .form__input,
