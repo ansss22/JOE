@@ -1,7 +1,9 @@
+
 /* Import des styles de base depuis index.css */
 @import url("index.css");
 
 /* Styles spécifiques à la page Contact */
+
 :root {
   --primary-color: #590808;
   --secondary-color: #913d34;
@@ -22,8 +24,100 @@ body {
   background-color: var(--background-color);
 }
 
+
 /* Formulaire */
 .l-form {
+
+/* Header (Navbar) */
+.navbar {
+  background-color: rgba(89, 8, 8, 0.9);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(89, 8, 8, 0.9);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #ffe5dc !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #7ca4ff !important;
+}
+
+.navbar-toggler {
+  border-color: #ffe5dc;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 229, 220, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* hero styles */
+.hero {
+  background: linear-gradient(rgba(89, 8, 8, 0.8), rgba(145, 61, 52, 0.8)),
+    no-repeat center center;
+  background-size: cover;
+  height: 30vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  padding: 2rem 1rem;
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.contacts .map iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.contact-addresses h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-unstyled li {
+  margin-bottom: 1rem;
+}
+
+.list-unstyled i {
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
+}
+
+/* Floating Label Container */
+.form-div {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Input & Textarea Styling */
+.form-input {
+
   width: 100%;
   max-width: 800px;
   padding: 3rem;
@@ -36,7 +130,15 @@ body {
   box-sizing: border-box;
   margin: 80px auto; /* Centrer le formulaire */
 }
+
 .form__label {
+
+
+/* Label Styling */
+
+/* Ensure label stays above the input field */
+
+
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -72,6 +174,7 @@ body {
 .form__input::placeholder {
   opacity: 0;
 }
+
 .l-form:hover,
 .l-form:focus-within {
   box-shadow: none !important; /* Empêche l'ombre au survol ou focus */
@@ -81,6 +184,129 @@ body {
   position: relative;
   margin-bottom: 2rem;
   box-shadow: none !important; /* Désactive les ombres */
+=======
+
+.contact-form .btn-primary:hover {
+  box-shadow: 0 10px 36px rgba(235, 64, 12, 0.5);
+}
+
+/* footer styles */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 3rem 0 1rem;
+}
+
+.footer h5 {
+  color: var(--highlight-color);
+  margin-bottom: 1.5rem;
+}
+
+.footer .about-us p {
+  margin-bottom: 1.5rem;
+}
+
+.footer .list-inline-item a {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer .list-inline-item a:hover {
+  color: var(--highlight-color);
+}
+
+.footer .contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .contact-list li {
+  margin-bottom: 1rem;
+}
+
+.footer .contact-list i {
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
+}
+
+.copyright {
+  border-top: 1px solid var(--secondary-color);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .l-form {
+    padding: 2rem;
+  }
+
+  .form__title {
+    font-size: 1.8rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .l-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form__input,
+  textarea,
+  select {
+    font-size: 0.9rem;
+  }
+
+  .form__button {
+    font-size: 1rem;
+  }
+
+  .top-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-us,
+  .contact-us {
+    max-width: 100%;
+  }
+}
+
+
+main {
+  padding-top: 70px;
+}
+
+
+main {
+  padding-top: 70px;
+}
+
+/* Formulaire */
+/* 
+.l-form {
+  width: 100%;
+  max-width: 800px;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: box-shadow var(--transition-speed);
+  position: relative;
+  box-sizing: border-box;
+
+  margin: 80px auto; /* Centrer le formulaire */
+
+  margin-top: 80px; 
+
+
 }
 
 
@@ -177,7 +403,11 @@ textarea {
   transform: translateY(0);
 }
 
+
 /* Carte Google Maps */
+=======
+
+
 .map-container {
   margin-top: 2rem;
   border-radius: 10px;
@@ -185,6 +415,7 @@ textarea {
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 800px;
+
   margin: 2rem auto; /* Centrer la carte */
 }
 
@@ -289,3 +520,10 @@ textarea {
     margin-bottom: 2rem;
   }
 }
+
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+*/
+
