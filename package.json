@@ -9,9 +9,23 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "live-server": "^1.2.2",
     "vite": "^6.0.5"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansss22/JOE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansss22/JOE/issues"
+  },
+  "homepage": "https://github.com/ansss22/JOE#readme",
+  "description": ""
 }

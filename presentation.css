@@ -123,34 +123,60 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+/* Styles généraux */
 #presentation {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  padding: 5rem 0;
+  background-color: #f8f9fa;
+  padding: 60px 0;
 }
 
-#presentation h2,
-#presentation h3 {
-  color: var(--primary-color);
-  font-weight: 700;
+.container {
+  max-width: 900px;
+  margin: auto;
 }
 
-#presentation p {
+h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-top: 30px;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
+}
+
+p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--secondary-color);
+  color: #555;
   text-align: justify;
 }
 
-#presentation .text-center img {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Style de l'image */
+.text-center img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-#presentation .text-center img:hover {
+.text-center img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 1.8rem;
+  }
+  h3 {
+      font-size: 1.3rem;
+  }
+  p {
+      font-size: 1rem;
+  }
 }
