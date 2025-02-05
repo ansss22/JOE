@@ -11,11 +11,6 @@
   --highlight-color: #7ca4ff;
   --text-color: #333;
   --background-color: #fff;
-  --border-color: #DADCE0;
-  --focus-border-color: #FF6347;
-  --input-color: #80868B;
-  --input-padding: 1rem;
-  --transition-speed: 0.3s;
 }
 
 body {
@@ -24,19 +19,19 @@ body {
   background-color: var(--background-color);
 }
 
+main {
+  padding-top: 70px;
+}
 
-/* Formulaire */
-.l-form {
-
-/* Header (Navbar) */
+h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem !important;
+  
+}
+/* navbar styles */
 .navbar {
-  background-color: rgba(89, 8, 8, 0.9);
+  background-color: var(--primary-color);
   padding: 1rem 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
@@ -46,35 +41,65 @@ body {
 
 .navbar-brand,
 .nav-link {
-  color: #ffe5dc !important;
+  color: var(--accent-color) !important;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #7ca4ff !important;
+  color: var(--highlight-color) !important;
 }
 
 .navbar-toggler {
-  border-color: #ffe5dc;
+  border-color: var(--accent-color);
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 229, 220, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
-/* hero styles */
+/* navbar styles ends */
+/* hero section */
 .hero {
-  background: linear-gradient(rgba(89, 8, 8, 0.8), rgba(145, 61, 52, 0.8)),
-    no-repeat center center;
+  background: linear-gradient(rgba(89, 8, 8, 0.4), rgba(145, 61, 52, 0.8)),
+    url(images/background.jpg) no-repeat center center;
   background-size: cover;
-  height: 30vh;
-  min-height: 300px;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: var(--accent-color);
-  padding: 2rem 1rem;
 }
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+/* end hero section */
 
 .hero h4 {
   font-size: 1.5rem;
@@ -117,28 +142,22 @@ body {
 
 /* Input & Textarea Styling */
 .form-input {
-
   width: 100%;
-  max-width: 800px;
-  padding: 3rem;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: none !important; /* Désactive l'ombre */
-  backdrop-filter: blur(10px);
-  transition: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  outline: none;
+  background: none;
   position: relative;
-  box-sizing: border-box;
-  margin: 80px auto; /* Centrer le formulaire */
+  z-index: 1;
 }
-
-.form__label {
-
 
 /* Label Styling */
 
 /* Ensure label stays above the input field */
 
-
+.form-label {
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -154,8 +173,8 @@ body {
 }
 
 /* Move Label Up When Input is Focused */
-.form__input:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label {
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   top: -0.6rem;
   left: 0.8rem;
   font-size: 0.8rem;
@@ -171,20 +190,9 @@ body {
 }
 
 /* Ensure Input Has No Placeholder */
-.form__input::placeholder {
+.form-input::placeholder {
   opacity: 0;
 }
-
-.l-form:hover,
-.l-form:focus-within {
-  box-shadow: none !important; /* Empêche l'ombre au survol ou focus */
-}
-
-.form__div {
-  position: relative;
-  margin-bottom: 2rem;
-  box-shadow: none !important; /* Désactive les ombres */
-=======
 
 .contact-form .btn-primary:hover {
   box-shadow: 0 10px 36px rgba(235, 64, 12, 0.5);
@@ -306,9 +314,11 @@ main {
 
   margin-top: 80px; 
 
-
 }
 
+.l-form:hover {
+  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
+}
 
 .form__title {
   font-size: 2rem;
@@ -326,7 +336,10 @@ main {
   gap: 2rem;
 }
 
-
+.form__div {
+  position: relative;
+  margin-bottom: 2rem;
+}
 
 .form__input,
 textarea,
@@ -345,36 +358,29 @@ select {
 textarea:focus,
 select:focus {
   border-color: var(--focus-border-color);
-  /* Supprimer l'effet d'ombre au focus */
-  box-shadow: none;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
 }
 
-/* Label Styling */
-.form-label {
+.form__label {
   position: absolute;
-  left: 1rem;
   top: 50%;
+  left: 15px;
   transform: translateY(-50%);
-  color: var(--text-color);
-  padding: 0 0.3rem;
-  transition: 0.3s ease-in-out;
-  z-index: 10; /* Ensure label is above input */
+  color: var(--input-color);
+  font-size: 1rem;
+  transition: all var(--transition-speed);
 }
 
-/* Move Label Up When Input is Focused */
-.form__input:focus + .form-label,
-textarea:focus + .form-label,
-select:focus + .form-label,
-.form__input:not(:placeholder-shown) + .form-label,
-textarea:not(:placeholder-shown) + .form-label,
-select:not(:placeholder-shown) + .form-label {
+.form_input:focus + .form_label,
+textarea:focus + .form__label,
+select:focus + .form__label,
+.form_input:not(:placeholder-shown) + .form_label,
+textarea:not(:placeholder-shown) + .form__label,
+select:not(:placeholder-shown) + .form__label {
   top: -12px;
-  left: 0.8rem;
-  font-size: 0.8rem;
-  color: var(--secondary-color);
-  background-color: white; /* Ensures label has background */
-  z-index: 10; /* Keep it on top */
-  padding: 0 5px;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 textarea {
@@ -394,6 +400,26 @@ textarea {
   position: relative;
 }
 
+.form__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.form__button:hover::after {
+  width: 400%;
+  height: 400%;
+  opacity: 1;
+}
+
 .form__button:hover {
   background-color: var(--button-hover);
   transform: translateY(-3px);
@@ -404,8 +430,6 @@ textarea {
 }
 
 
-/* Carte Google Maps */
-=======
 
 
 .map-container {
