@@ -1,8 +1,4 @@
 
-/* Import des styles de base depuis index.css */
-@import url("index.css");
-
-/* Styles spécifiques à la page Contact */
 
 :root {
   --primary-color: #590808;
@@ -309,13 +305,11 @@ main {
   transition: box-shadow var(--transition-speed);
   position: relative;
   box-sizing: border-box;
-
-  margin: 80px auto; /* Centrer le formulaire */
-
+  margin: 80px auto;  
   margin-top: 80px; 
 
 }
-
+*/
 .l-form:hover {
   box-shadow: 0 15px 80px rgba(0, 0, 0, 0.15);
 }
@@ -545,9 +539,7 @@ textarea {
   }
 }
 
-  margin-left: auto;
-  margin-right: auto;
-} 
 
-*/
+
+
 
