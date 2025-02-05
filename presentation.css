@@ -12,7 +12,11 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
-
+h1 {
+  color: white;
+  font-size: 2.5rem !important;
+  font-weight: 700;
+}
 /* navbar styles */
 .navbar {
   background-color: var(--primary-color);
