@@ -193,62 +193,100 @@ body {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
+/* Styles pour la section Texte + Image */
+#presentation .row.align-items-center {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#presentation .row.align-items-center h3 {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#presentation .row.align-items-center p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+#presentation .row.align-items-center img {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#presentation .row.align-items-center img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
 /* Animations */
 @keyframes fadeInDown {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInLeft {
   from {
-      opacity: 0;
-      transform: translateX(-20px);
+    opacity: 0;
+    transform: translateX(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes fadeInRight {
   from {
-      opacity: 0;
-      transform: translateX(20px);
+    opacity: 0;
+    transform: translateX(20px);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   #presentation h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   #presentation h3 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   #presentation p {
-      font-size: 1rem;
+    font-size: 1rem;
+  }
+
+  #presentation .row.align-items-center {
+    flex-direction: column;
+  }
+
+  #presentation .row.align-items-center img {
+    margin-top: 1.5rem;
   }
 }
