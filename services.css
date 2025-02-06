@@ -18,6 +18,10 @@ body {
   background-color: var(--background-color);
 }
 
+.navbar-brand img {
+  height: 50px; 
+  width: auto; 
+}
 /* navbar styles */
 .navbar {
   background-color: var(--primary-color);
